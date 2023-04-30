@@ -1,0 +1,62 @@
+
+
+body {
+    margin: 5rem
+}
+
+p{
+    line-height: 0.5rem;
+    /* delete (dev)*/
+    /*white-space: nowrap;*/
+}
+
+h1 {
+    margin-bottom: 3.5rem;
+    text-align: center;
+}
+svg {
+    width: 5px;
+    height: 5px;
+    vertical-align: bottom;
+}
+
+div {
+    margin-bottom: 5rem;
+}
+
+.lm {
+    margin-left: 1rem;
+
+}
+
+.rm{
+    margin-right: 1rem;
+}
+
+.right-100 {
+    margin-left: 55%;
+}
+
+.left-100 {
+}
+
+.right-80 {
+    margin-left: 50%;
+}
+
+.left-80 {
+    margin-left: 4%;
+}
+
+.center {
+    margin-left: 25%;
+}
+
+.cursive{
+    font-style: italic;
+}
+
+/*dev*/
+br{
+    margin-bottom:  1000000px;
+}
