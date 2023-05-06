@@ -1,7 +1,27 @@
 
 
+
 body {
-    margin: 5rem
+    margin: 5rem;
+    background-image: url("background.png");
+}
+
+.gif1{
+    position: absolute;
+    width: 20rem;
+    height: auto;
+    margin: 0 0 0 10rem;
+}
+
+.gif2{
+    position: absolute;
+    width: 20rem;
+    height: auto;
+    margin: 0 0 0 10rem;
+}
+
+.pad50 {
+    padding-bottom: 30rem ;
 }
 
 p{
@@ -13,6 +33,14 @@ p{
 h1 {
     margin-bottom: 3.5rem;
     text-align: center;
+    background: rgb(9,121,96);
+    background: radial-gradient(circle, rgba(9,121,96,1) 15%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.lgth{
+    text-decoration: line-through;
+    text-decoration-color: white;
 }
 svg {
     width: 5px;
