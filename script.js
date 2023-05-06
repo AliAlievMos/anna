@@ -30,7 +30,6 @@ backBtn.addEventListener('click', ()=>{
     location.reload();
     }
 );
-testButton.addEventListener('click',() => {console.log("12")});
 
 // function revertHTML() {
 //     document.body.innerHTML = originalHTML;

@@ -1,16 +1,21 @@
-
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url('./SourceCodePro-Regular.ttf') format('truetype');
+}
 
 
 body {
+    font-family: 'Source Code Pro', monospace;
     margin: 5rem;
     background-image: url("background.png");
+    background-repeat: no-repeat;
 }
 
 .gif1{
     position: absolute;
     width: 20rem;
     height: auto;
-    margin: 0 0 0 10rem;
+    margin: 3rem 0 0 10rem;
 }
 
 .gif2{
@@ -22,6 +27,10 @@ body {
 
 .pad50 {
     padding-bottom: 30rem ;
+}
+
+.mt {
+    margin-top: 8rem;
 }
 
 p{
