@@ -9,6 +9,7 @@ body {
     margin: 5rem;
     background-image: url("background.png");
     background-repeat: no-repeat;
+    white-space: nowrap;
 }
 
 .gif1{
@@ -16,6 +17,13 @@ body {
     width: 20rem;
     height: auto;
     margin: 3rem 0 0 10rem;
+}
+.can{
+    border: 5px solid gray;
+    width: 25rem;
+    height: 10rem;
+    z-index: 50;
+    position: absolute;
 }
 
 .gif2{
