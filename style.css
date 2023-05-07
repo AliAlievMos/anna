@@ -59,6 +59,14 @@ svg {
 }
 .canvas{
     border: 0.3rem solid grey;
+    width: 25rem;
+    height: 10rem;
+    z-index: 50;
+    position: absolute;
+}
+
+.cen-can{
+    left: 12rem;
 }
 div {
     margin-bottom: 5rem;
