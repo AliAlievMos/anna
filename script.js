@@ -2,8 +2,8 @@ const replaceBtn = document.getElementById('replaceBtn');
 const backBtn = document.getElementById('backBtn');
 // const originalHTML = document
 const dropSvg = ['<img src="drop1.png" alt="Description of your image" width="15" height="auto">',
-                            '<img src="drop2.png" alt="Description of your image" width="15" height="auto">',
-                            '<img src="drop3.png" alt="Description of your image" width="35" height="auto">']
+    '<img src="drop2.png" alt="Description of your image" width="15" height="auto">',
+    '<img src="drop3.png" alt="Description of your image" width="35" height="auto">']
 replaceBtn.addEventListener('click', () => {
     let text = document.getElementById('text');
     let divs =    text.querySelectorAll("div");
@@ -25,7 +25,7 @@ replaceBtn.addEventListener('click', () => {
 });
 
 backBtn.addEventListener('click', ()=>{
-    location.reload();
+        location.reload();
     }
 );
 
@@ -44,10 +44,10 @@ function randomDrop(){
 
 
 
-    const paintCanvas = document.querySelector("#canvas")
+const paintCanvas = document.querySelector("#canvas")
 
 
-    const context = paintCanvas.getContext("2d")
+const context = paintCanvas.getContext("2d")
 
 var points = [
     { x: 100, y: 50 },
@@ -62,40 +62,39 @@ var points = [
     { x: 80, y: 90 }
 ];
 
-    context.lineCap = "round"
-    context.lineWidth = 2
+context.lineCap = "round"
+context.lineWidth = 5
 
+let x = 0
+let y = 0
+let isMouseDown = false
 
-    let x = 0
-    let y = 0
-    let isMouseDown = false
+const stopDrawing = () => {
+    isMouseDown = false
+}
+const startDrawing = (event) => {
+    isMouseDown = true
+    ;[x, y] = [event.offsetX, event.offsetY]
+}
 
-    const stopDrawing = () => {
-        isMouseDown = false
-    }
-    const startDrawing = (event) => {
-        isMouseDown = true
-        ;[x, y] = [event.offsetX, event.offsetY]
-    }
-
-    const drawLine = (event) => {
-        if (isMouseDown) {
-            const newX = event.offsetX
-            const newY = event.offsetY
-            console.log(isPointInPolygon(newX, newY, points))
-            if (isPointInPolygon(newX, newY, points)) {
-                context.strokeStyle = "#ff0000"
-            } else {
-                context.strokeStyle = "#000000"
-            }
-            context.beginPath()
-            context.moveTo(x, y)
-            context.lineTo(newX, newY)
-            context.stroke()
-            x = newX
-            y = newY
+const drawLine = (event) => {
+    if (isMouseDown) {
+        const newX = event.offsetX
+        const newY = event.offsetY
+        console.log(isPointInPolygon(newX, newY, points))
+        if (isPointInPolygon(newX, newY, points)) {
+            context.strokeStyle = "#0e33ba"
+        } else {
+            context.strokeStyle = "#000000"
         }
+        context.beginPath()
+        context.moveTo(x, y)
+        context.lineTo(newX, newY)
+        context.stroke()
+        x = newX
+        y = newY
     }
+}
 function isPointInPolygon(x, y, points) {
     var inside = false;
     for (var i = 0, j = points.length - 1; i < points.length; j = i++) {
@@ -112,10 +111,10 @@ function isPointInPolygon(x, y, points) {
 }
 
 
-    paintCanvas.addEventListener("mousedown", startDrawing)
-    paintCanvas.addEventListener("mousemove", drawLine)
-    paintCanvas.addEventListener("mouseup", stopDrawing)
-    paintCanvas.addEventListener("mouseout", stopDrawing)
+paintCanvas.addEventListener("mousedown", startDrawing)
+paintCanvas.addEventListener("mousemove", drawLine)
+paintCanvas.addEventListener("mouseup", stopDrawing)
+paintCanvas.addEventListener("mouseout", stopDrawing)
 
 
 
@@ -307,17 +306,17 @@ $(document).ready(function () {
             draw();
         }
     }
-function mouseUp() {
-    paint = false;
-}
+    function mouseUp() {
+        paint = false;
+    }
 
-function mouseDown(e) {
-    var mouseX = e.pageX - this.offsetLeft;
-    var mouseY = e.pageY - this.offsetTop;
-    paint = true;
-    addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop - 40);
-    draw();
-}
+    function mouseDown(e) {
+        var mouseX = e.pageX - this.offsetLeft;
+        var mouseY = e.pageY - this.offsetTop;
+        paint = true;
+        addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop - 40);
+        draw();
+    }
 });
 
 $(document).ready(function () {
