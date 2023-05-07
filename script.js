@@ -49,8 +49,22 @@ function randomDrop(){
 
     const context = paintCanvas.getContext("2d")
 
+var points = [
+    { x: 100, y: 50 },
+    { x: 120, y: 90 },
+    { x: 160, y: 90 },
+    { x: 130, y: 120 },
+    { x: 140, y: 160 },
+    { x: 100, y: 135 },
+    { x: 60, y: 160 },
+    { x: 70, y: 120 },
+    { x: 40, y: 90 },
+    { x: 80, y: 90 }
+];
+
     context.lineCap = "round"
     context.lineWidth = 2
+
 
     let x = 0
     let y = 0
@@ -68,6 +82,12 @@ function randomDrop(){
         if (isMouseDown) {
             const newX = event.offsetX
             const newY = event.offsetY
+            console.log(isPointInPolygon(newX, newY, points))
+            if (isPointInPolygon(newX, newY, points)) {
+                context.strokeStyle = "#ff0000"
+            } else {
+                context.strokeStyle = "#000000"
+            }
             context.beginPath()
             context.moveTo(x, y)
             context.lineTo(newX, newY)
@@ -76,6 +96,21 @@ function randomDrop(){
             y = newY
         }
     }
+function isPointInPolygon(x, y, points) {
+    var inside = false;
+    for (var i = 0, j = points.length - 1; i < points.length; j = i++) {
+        var xi = points[i].x, yi = points[i].y;
+        var xj = points[j].x, yj = points[j].y;
+
+        var intersect = ((yi > y) != (yj > y)) &&
+            (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+        if (intersect) {
+            inside = !inside;
+        }
+    }
+    return inside;
+}
+
 
     paintCanvas.addEventListener("mousedown", startDrawing)
     paintCanvas.addEventListener("mousemove", drawLine)
