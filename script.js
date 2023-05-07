@@ -63,7 +63,7 @@ var points = [
 ];
 
 context.lineCap = "round"
-context.lineWidth = 5
+context.lineWidth = 1
 
 let x = 0
 let y = 0
@@ -83,9 +83,9 @@ const drawLine = (event) => {
         const newY = event.offsetY
         console.log(isPointInPolygon(newX, newY, points))
         if (isPointInPolygon(newX, newY, points)) {
-            context.strokeStyle = "#0e33ba"
+            context.strokeStyle = "#ffffff"
         } else {
-            context.strokeStyle = "#000000"
+            context.strokeStyle = "#0e33ba"
         }
         context.beginPath()
         context.moveTo(x, y)

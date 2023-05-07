@@ -18,7 +18,7 @@ body {
         font-size: 0.8em !important;
     }
     canvas {
-        border: 0.3rem solid grey !important;
+        border: 0.1rem solid grey !important;
         width: 18rem !important;
         height: 6rem !important;
     }
