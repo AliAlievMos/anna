@@ -130,7 +130,7 @@ const paintCanvas1 = document.querySelector("#canvas1")
 const context1 = paintCanvas1.getContext("2d")
 
 context1.lineCap = "round"
-context1.lineWidth = 2
+context1.lineWidth = 1
 
 let x1 = 0
 let y1 = 0
@@ -172,7 +172,7 @@ const paintCanvas2 = document.querySelector("#canvas2")
 const context2 = paintCanvas2.getContext("2d")
 
 context2.lineCap = "round"
-context2.lineWidth = 2
+context2.lineWidth = 1
 
 let x2 = 0
 let y2 = 0
@@ -215,7 +215,7 @@ const paintCanvas3 = document.querySelector("#canvas3")
 const context3 = paintCanvas3.getContext("2d")
 
 context3.lineCap = "round"
-context3.lineWidth = 2
+context3.lineWidth = 1
 
 let x3 = 0
 let y3 = 0
@@ -276,7 +276,7 @@ $(document).ready(function () {
 
         context.strokeStyle = "#000000";  //set the "ink" color
         context.lineJoin = "miter";       //line join
-        context.lineWidth = 2;            //"ink" width
+        context.lineWidth = 1;            //"ink" width
 
         for (var i = 0; i < clickX.length; i++) {
             context.beginPath();                               //create a path
@@ -337,7 +337,7 @@ $(document).ready(function () {
 
         context.strokeStyle = "#000000";  //set the "ink" color
         context.lineJoin = "miter";       //line join
-        context.lineWidth = 2;            //"ink" width
+        context.lineWidth = 1;            //"ink" width
 
         for (var i = 0; i < clickX.length; i++) {
             context.beginPath();                               //create a path
@@ -398,7 +398,7 @@ $(document).ready(function () {
 
         context.strokeStyle = "#000000";  //set the "ink" color
         context.lineJoin = "miter";       //line join
-        context.lineWidth = 2;            //"ink" width
+        context.lineWidth = 1;            //"ink" width
 
         for (var i = 0; i < clickX.length; i++) {
             context.beginPath();                               //create a path
@@ -459,7 +459,7 @@ $(document).ready(function () {
 
         context.strokeStyle = "#000000";  //set the "ink" color
         context.lineJoin = "miter";       //line join
-        context.lineWidth = 2;            //"ink" width
+        context.lineWidth = 1;            //"ink" width
 
         for (var i = 0; i < clickX.length; i++) {
             context.beginPath();                               //create a path
