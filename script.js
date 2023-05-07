@@ -214,3 +214,7 @@ paintCanvas3.addEventListener("mousemove", drawLine3)
 paintCanvas3.addEventListener("mouseup", stopDrawing3)
 paintCanvas3.addEventListener("mouseout", stopDrawing3)
 
+paintCanvas3.addEventListener("touchstart", startDrawing3)
+paintCanvas3.addEventListener("touchmove", drawLine3)
+paintCanvas3.addEventListener("touchend", stopDrawing3)
+
