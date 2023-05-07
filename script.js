@@ -5,7 +5,6 @@ const dropSvg = ['<img src="drop1.png" alt="Description of your image" width="15
                             '<img src="drop2.png" alt="Description of your image" width="15" height="auto">',
                             '<img src="drop3.png" alt="Description of your image" width="35" height="auto">']
 replaceBtn.addEventListener('click', () => {
-    console.log("repl")
     let text = document.getElementById('text');
     let divs =    text.querySelectorAll("div");
     divs.forEach(div => {
