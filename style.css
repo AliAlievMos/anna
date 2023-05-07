@@ -9,6 +9,7 @@ body {
     margin: 5rem;
     background-image: url("background.png");
     background-repeat: no-repeat;
+    white-space: nowrap;
 }
 
 .gif1{
@@ -56,7 +57,9 @@ svg {
     height: 5px;
     vertical-align: bottom;
 }
-
+.canvas{
+    border: 0.3rem solid grey;
+}
 div {
     margin-bottom: 5rem;
 }
