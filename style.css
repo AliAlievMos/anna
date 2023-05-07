@@ -12,6 +12,26 @@ body {
     white-space: nowrap;
 }
 
+@media (max-width: 1200px) {
+    body{
+        margin: 1rem !important;
+        font-size: 0.8em !important;
+    }
+    canvas {
+        border: 0.3rem solid grey !important;
+        width: 18rem !important;
+        height: 6rem !important;
+    }
+    .gif1 {
+        width: 15rem !important;
+
+    }
+    .gif2 {
+        width: 15rem !important;
+    }
+
+}
+
 .gif1{
     position: absolute;
     width: 20rem;
