@@ -1,38 +1,51 @@
+// const replaceBtn = document.getElementById('replaceBtn');
 const replaceBtn = document.getElementById('replaceBtn');
-const backBtn = document.getElementById('backBtn');
+// const backBtn = document.getElementById('backBtn');
 // const originalHTML = document
-const dropSvg = ['<img src="drop1.png" alt="Description of your image" width="15" height="auto">',
-    '<img src="drop2.png" alt="Description of your image" width="15" height="auto">',
-    '<img src="drop3.png" alt="Description of your image" width="35" height="auto">']
+let isReplaced = false
+const dropSvg = [
+    '<img src="drop1.png" alt="Description of your image" width="35" height="auto">',
+    '<img src="drop2.png" alt="Description of your image" width="35" height="auto">',
+    '<img src="drop3.png" alt="Description of your image" width="55" height="auto">']
 replaceBtn.addEventListener('click', () => {
     let text = document.getElementById('text');
     let divs =    text.querySelectorAll("div");
-    divs.forEach(div => {
-        let ps = div.querySelectorAll("p")
-        ps.forEach(p => {
-            let letters = p.textContent.split('');
-            for (let i = 0; i < letters.length; i++) {
-                let letter = letters[i];
-                if (letter !== ' ') {
-                    if (randomInt() % 56 === 0) {
-                        letters[i] = dropSvg[randomDrop()]
+    if (isReplaced) {
+        location.reload();
+    } else {
+        isReplaced = true
+        divs.forEach(div => {
+            const elements = document.querySelectorAll("p");
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.lineHeight = '1.5rem';
+            }
+            let ps = div.querySelectorAll("p")
+            ps.forEach(p => {
+                let letters = p.textContent.split('');
+                for (let i = 0; i < letters.length; i++) {
+                    let letter = letters[i];
+                    if (letter !== ' ') {
+                        if (randomInt() % 56 === 0) {
+                            letters[i] = dropSvg[randomDrop()]
+                            letters[i + 1] = ' '
+                            letters[i + 2] = ' '
+                            letters[i + 3] = ' '
+                            letters[i + 4] = ' '
+                            letters[i + 5] = ' '
+                            letters[i + 6] = ' '
+                        }
                     }
                 }
-            }
-            p.innerHTML = letters.join('')
+                p.innerHTML = letters.join('')
+            });
         });
-    });
+    }
 });
 
-backBtn.addEventListener('click', ()=>{
-        location.reload();
-    }
-);
-
-// function revertHTML() {
-//     document.body.innerHTML = originalHTML;
-// }
-
+// backBtn.addEventListener('click', ()=>{
+//         location.reload();
+//     }
+// );
 
 function randomInt(){
     return Math.floor(Math.random() * 1146)
