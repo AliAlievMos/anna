@@ -17,7 +17,7 @@ replaceBtn.addEventListener('click', () => {
         divs.forEach(div => {
             const elements = document.querySelectorAll("p");
             for (let i = 0; i < elements.length; i++) {
-                elements[i].style.lineHeight = '1.5rem';
+                elements[i].style.lineHeight = '2rem';
             }
             let ps = div.querySelectorAll("p")
             ps.forEach(p => {
