@@ -38,9 +38,12 @@ body {
 }
 
 .gif2{
-    width: 100%;
-    height: 25rem;
-    margin: 0 0 0 0;
+    /*position: absolute;*/
+    cursor: pointer;
+    /*left: 80%;*/
+    /*top: +75%;*/
+    width: auto;
+    height: 16rem;
 }
 
 .pad50 {
@@ -80,6 +83,11 @@ svg {
     height: 10rem;
     z-index: 50;
     position: absolute;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
 }
 
 .cen-can{
