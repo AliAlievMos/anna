@@ -20,11 +20,11 @@ body {
         height: 6rem !important;
     }
     .gif1 {
-        width: 15rem !important;
+        width: 10rem !important;
 
     }
     .gif2 {
-        width: 15rem !important;
+        width: 7rem !important;
     }
     .pad50{
         padding-bottom: 0 !important;
@@ -33,17 +33,16 @@ body {
 }
 
 .gif1{
-    width: 100%;
+    width: 20rem;
     margin: 5rem 0 0 0;
 }
 
 .gif2{
-    /*position: absolute;*/
+    position: fixed;
     cursor: pointer;
-    /*left: 80%;*/
-    /*top: +75%;*/
-    width: auto;
-    height: 16rem;
+    top: 70%;
+    left: 60%;
+    width: 12rem;
 }
 
 .pad50 {
@@ -55,9 +54,7 @@ body {
 }
 
 p{
-    line-height: 0.5rem;
-    /* delete (dev)*/
-    /*white-space: nowrap;*/
+    line-height: 1rem;
 }
 
 h1 {

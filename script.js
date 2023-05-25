@@ -4,9 +4,9 @@ const replaceBtn = document.getElementById('replaceBtn');
 // const originalHTML = document
 let isReplaced = false
 const dropSvg = [
-    '<img src="drop1.png" alt="Description of your image" width="35" height="auto">',
-    '<img src="drop2.png" alt="Description of your image" width="35" height="auto">',
-    '<img src="drop3.png" alt="Description of your image" width="55" height="auto">']
+    '<img src="drop1.png" alt="Description of your image" width="10" height="auto">',
+    '<img src="drop2.png" alt="Description of your image" width="10" height="auto">',
+    '<img src="drop3.png" alt="Description of your image" width="20" height="auto">']
 replaceBtn.addEventListener('click', () => {
     let text = document.getElementById('text');
     let divs =    text.querySelectorAll("div");
@@ -16,23 +16,14 @@ replaceBtn.addEventListener('click', () => {
         isReplaced = true
         divs.forEach(div => {
             const elements = document.querySelectorAll("p");
-            for (let i = 0; i < elements.length; i++) {
-                elements[i].style.lineHeight = '2rem';
-            }
             let ps = div.querySelectorAll("p")
             ps.forEach(p => {
                 let letters = p.textContent.split('');
                 for (let i = 0; i < letters.length; i++) {
                     let letter = letters[i];
                     if (letter !== ' ') {
-                        if (randomInt() % 56 === 0) {
+                        if (randomInt() % 4 === 0) {
                             letters[i] = dropSvg[randomDrop()]
-                            letters[i + 1] = ' '
-                            letters[i + 2] = ' '
-                            letters[i + 3] = ' '
-                            letters[i + 4] = ' '
-                            letters[i + 5] = ' '
-                            letters[i + 6] = ' '
                         }
                     }
                 }
