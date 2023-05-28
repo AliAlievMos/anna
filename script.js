@@ -49,13 +49,15 @@ const body = document.getElementById('output-body');
 
 function printInput(){
     console.log(input.value)
-    let drops = '<p>'
+    let drops = '<p id="drops" style="cursor: pointer">'
     for (let i = 0;i < input.value.length; i++){
         drops += dropSvg[randomDrop()]
     }
-    console.log(drops)
     document.body.style.textAlign = 'center'
     body.innerHTML = input.value + drops;
+    document.getElementById("drops").addEventListener("click", function(event) {
+        location.reload();
+    });
 }
 
 input.addEventListener("keyup", function(event) {
