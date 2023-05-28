@@ -49,12 +49,12 @@ const body = document.getElementById('output-body');
 
 function printInput(){
     console.log(input.value)
-    let drops = '<p id="drops" style="cursor: pointer">'
+    let drops = `<p style="margin-top: 30%">${input.value}</p> <p id="drops" style="cursor: pointer">`
     for (let i = 0;i < input.value.length; i++){
         drops += dropSvg[randomDrop()]
     }
     document.body.style.textAlign = 'center'
-    body.innerHTML = input.value + drops;
+    body.innerHTML = drops;
     document.getElementById("drops").addEventListener("click", function(event) {
         location.reload();
     });
