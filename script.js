@@ -24,6 +24,8 @@ replaceBtn.addEventListener('click', () => {
                         }
                     }
                 }
+                console.log(letters)
+                // letters.push('</p>')
                 p.innerHTML = letters.join('')
             });
         });
