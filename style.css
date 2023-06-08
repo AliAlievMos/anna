@@ -33,6 +33,9 @@ body {
     #7div{
         margin-left: 50% !important;
     }
+    .left-100 {
+        margin-left: 3%;
+    }
 
 }
 
