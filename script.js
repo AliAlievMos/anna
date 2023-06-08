@@ -48,7 +48,7 @@ const output = document.getElementById('output');
 const body = document.getElementById('output-body');
 
 function printInput(){
-    console.log(input.value)
+    document.body.style.zoom = "50%";
     let drops = `<p style="margin-top: 30%">${input.value}</p> <p id="drops" style="cursor: pointer">`
     for (let i = 0;i < input.value.length; i++){
         drops += dropSvg[randomDrop()]
@@ -59,6 +59,12 @@ function printInput(){
         location.reload();
     });
 }
+function setMinZoom() {
+    var viewport = document.querySelector('meta[name="viewport"]');
+    var minScale = 0.5; // Adjust this value to set the minimum zoom level
+
+    viewport.setAttribute('content', 'initial-scale=' + minScale + ', maximum-scale=5');
+}
 
 input.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
@@ -66,3 +72,4 @@ input.addEventListener("keyup", function(event) {
         document.getElementById("button").click();
     }
 });
+
