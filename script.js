@@ -62,9 +62,8 @@ function printInput(){
 }
 
 function scrollToDiv() {
-    console.log("here")
     var divElement = document.getElementById('drops');
-    divElement.scrollIntoView({ behavior: 'smooth' });
+    divElement.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
 }
 function setMinZoom() {
     var viewport = document.querySelector('meta[name="viewport"]');
