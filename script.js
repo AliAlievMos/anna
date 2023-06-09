@@ -48,7 +48,7 @@ const output = document.getElementById('output');
 const body = document.getElementById('output-body');
 
 function printInput(){
-    document.body.style.zoom = "50%";
+    // document.body.style.zoom = "50%";
     let drops = `<p style="margin-top: 30%">${input.value}</p> <p id="drops" style="cursor: pointer">`
     for (let i = 0;i < input.value.length; i++){
         drops += dropSvg[randomDrop()]
@@ -58,6 +58,13 @@ function printInput(){
     document.getElementById("drops").addEventListener("click", function(event) {
         location.reload();
     });
+    scrollToDiv()
+}
+
+function scrollToDiv() {
+    console.log("here")
+    var divElement = document.getElementById('drops');
+    divElement.scrollIntoView({ behavior: 'smooth' });
 }
 function setMinZoom() {
     var viewport = document.querySelector('meta[name="viewport"]');
