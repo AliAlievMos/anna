@@ -62,6 +62,7 @@ function printInput(){
 }
 
 function scrollToDiv() {
+    console.log("here")
     var divElement = document.getElementById('drops');
     divElement.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
 }
