@@ -49,10 +49,12 @@ const body = document.getElementById('output-body');
 
 function printInput(){
     // document.body.style.zoom = "50%";
-    let drops = `<p style="margin-top: 30%">${input.value}</p> <p id="drops" style="cursor: pointer">`
+    // let drops = `<div class="drops"><p class="content-drops" style="margin-top: 30%">${input.value}</p> <p id="drops" style="cursor: pointer"></div>`
+    let drops = `<div class="drops"><p>${input.value}</p><p id="drops" style="cursor: pointer">`
     for (let i = 0;i < input.value.length; i++){
         drops += dropSvg[randomDrop()]
     }
+    drops += `</p></div>`
     document.body.style.textAlign = 'center'
     body.innerHTML = drops;
     document.getElementById("drops").addEventListener("click", function(event) {
@@ -62,7 +64,6 @@ function printInput(){
 }
 
 function scrollToDiv() {
-    console.log("here")
     var divElement = document.getElementById('drops');
     divElement.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
 }
